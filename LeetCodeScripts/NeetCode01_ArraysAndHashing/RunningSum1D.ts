@@ -9,8 +9,8 @@ function runningSum1D(nums: number[]): number[] {
     if (i > 0) {
       arr[i] += arr[i - 1];
     }
+    console.log(arr);
   }
 
-  console.log(arr);
   return arr;
 }
