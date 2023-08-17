@@ -1,1 +1,13 @@
-lef
+/* 104. Maximum Depth of Binary Tree*/
+function maxDepth(root: TreeNode | null): number {
+
+    if (root != null) {
+        return 0;
+    }
+    else {
+        let left = maxDepth(root.left);
+        let right = maxDepth(root.right);
+
+        return Math.max(left, right) + 1;
+    }
+} 
