@@ -6,7 +6,7 @@ function search(nums, target) {
     // 10-5 - 5 / 2
     // 10 - 5 = 5, 5 / 2 = 3 + left = 8
     // 8 - 5 = 3, / 2 = 2, 5 + 2 = 7
-    while (left <= right) {
+    while (left < right) {
         let mid = Math.floor((right - left) / 2) + left;
         if (target === nums[mid]) {
             return mid;
