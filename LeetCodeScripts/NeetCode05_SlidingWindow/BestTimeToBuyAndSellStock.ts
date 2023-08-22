@@ -1,3 +1,4 @@
+/* 3. Best time to buy and sell stock */
 function maxProfit(prices: number[]): number {
     if (prices.length == 0 || prices == null) return 0;
     let left = 0;
