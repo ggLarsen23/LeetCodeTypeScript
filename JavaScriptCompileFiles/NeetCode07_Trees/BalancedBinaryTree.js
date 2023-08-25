@@ -1,5 +1,7 @@
+/* 110. Balanced Binary Tree, O(n) in time and space */
 function isBalanced(root) {
     let balancedFlag = true;
+    dfs(root);
     function dfs(node) {
         if (node == null)
             return 0;
@@ -11,7 +13,7 @@ function isBalanced(root) {
         if (node.right != null) {
             right = dfs(node.right);
         }
-        if (left >= right + 2 || left <= right - 2) {
+        if (Math.abs(left - right) > 1) {
             balancedFlag = false;
         }
         return Math.max(left, right) + 1;
